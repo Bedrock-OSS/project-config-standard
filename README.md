@@ -1,6 +1,6 @@
 # project-config-standard
 
-This standard aims to provide the speification of a JSON config file for Minecraft projects that provides a common foundations for all tools in the corresponding ecosystem to build upon.
+This standard aims to provide the specification of a JSON config file for Minecraft projects that provides a common foundations for all tools in the corresponding ecosystem to build upon.
 
 ## `config.json` File
 
