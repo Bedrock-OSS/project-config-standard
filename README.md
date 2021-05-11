@@ -40,12 +40,12 @@ interface ConfigJson {
 	 */
 	minecraftExperiments: string[]
 
-    /**
-     * Additional capabilities the project wants to use
-     * 
-     * @example ["scriptingAPI", "gameTestAPI"]
-     */
-    capabilities: string[]
+    	/**
+    	 * Additional capabilities the project wants to use
+    	 * 
+    	 * @example ["scriptingAPI", "gameTestAPI"]
+    	 */
+    	capabilities: string[]
 
 	/**
 	 * The namespace used for the project. The namespace "minecraft" is not a valid string for this field.
