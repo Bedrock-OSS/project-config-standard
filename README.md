@@ -28,7 +28,7 @@ interface ConfigJson {
 	/**
 	 * The Minecraft version this project targets
 	 *
-	 * @example "1.17.0"/"1.16.220"
+	 * @example "1.17.0" / "1.16.220"
 	 */
 	targetVersion: string
 
