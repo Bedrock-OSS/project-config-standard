@@ -36,16 +36,16 @@ interface ConfigJson {
 	 * Experimental gameplay the project intends to use.
 	 * Exact mapping of strings to experimental gameplay toggles needs to be specified later.
 	 *
-	 * @example ["upcomingCreatorFeatures", "cavesAndCliffs"]
+	 * @example {"upcomingCreatorFeatures": true, "cavesAndCliffs": false}
 	 */
-	minecraftExperiments: string[]
+	experimentalGameplay: Record<string, boolean>
 
-    	/**
-    	 * Additional capabilities the project wants to use
-    	 * 
-    	 * @example ["scriptingAPI", "gameTestAPI"]
-    	 */
-    	capabilities: string[]
+	/**
+	 * Additional capabilities the project wants to use
+	 *
+	 * @example ["scriptingAPI", "gameTestAPI"]
+	 */
+	capabilities: string[]
 
 	/**
 	 * The namespace used for the project. The namespace "minecraft" is not a valid string for this field.
@@ -81,6 +81,20 @@ interface ConfigJson {
 		tags: PackDefinition
 		scoreboardObjectives: PackDefinition
 		names: PackDefinition
+	}
+
+	/**
+	 * Configures bridge.'s compiler
+	 *
+	 * @example { "compiler": { "plugins": ["moLang"] } }
+	 */
+	compiler: {
+		/**
+		 * Which compiler plugins the user wants to use for the project
+		 *
+		 * @example { "plugins": ["moLang", ["simpleRewrite": { "packName": "My Pack" }]] }
+		 */
+		plugins: (string | [string, Record<string, unknown>])[]
 	}
 
 	/**
