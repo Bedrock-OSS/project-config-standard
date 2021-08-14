@@ -21,9 +21,9 @@ interface ConfigJson {
 	/**
 	 * Creator of the project
 	 *
-	 * @example "solvedDev" / "Joel ant 05"
+	 * @example ["solvedDev", "Joel ant 05"]
 	 */
-	author: string
+	authors: string[]
 
 	/**
 	 * The Minecraft version this project targets
