@@ -41,13 +41,6 @@ interface ConfigJson {
 	experimentalGameplay: Record<string, boolean>
 
 	/**
-	 * Additional capabilities the project wants to use
-	 *
-	 * @example ["scriptingAPI", "gameTestAPI"]
-	 */
-	capabilities: string[]
-
-	/**
 	 * The namespace used for the project. The namespace "minecraft" is not a valid string for this field.
 	 *
 	 * @example "my_project"
