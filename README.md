@@ -38,7 +38,7 @@ interface ConfigJson {
 	 *
 	 * @example {"upcomingCreatorFeatures": true, "cavesAndCliffs": false}
 	 */
-	experimentalGameplay: Record<string, boolean>
+	experimentalGameplay?: Record<string, boolean>
 
 	/**
 	 * The namespace used for the project. The namespace "minecraft" is not a valid string for this field.
@@ -69,26 +69,13 @@ interface ConfigJson {
 	 *
 	 * @example { "names": { "include": ["solvedDev"] } }
 	 */
-	packDefinitions: {
+	packDefinitions?: {
 		families: PackDefinition
 		tags: PackDefinition
 		scoreboardObjectives: PackDefinition
 		names: PackDefinition
 	}
 
-	/**
-	 * Configures bridge.'s compiler
-	 *
-	 * @example { "compiler": { "plugins": ["moLang"] } }
-	 */
-	compiler: {
-		/**
-		 * Which compiler plugins the user wants to use for the project
-		 *
-		 * @example { "plugins": ["moLang", ["simpleRewrite": { "packName": "My Pack" }]] }
-		 */
-		plugins: (string | [string, Record<string, unknown>])[]
-	}
 
 	/**
 	 * Tools can create their own namespace inside of this file to save tool specific data and settings
@@ -130,3 +117,8 @@ A common project structure for a Minecraft Bedrock project following this standa
 ```
 
 The specification only handles the config.json file at the root of the project. The exact folder names of individual packs can change based on its content.
+
+## Reserved Tool IDs
+The following tool identifiers are already in use:
+- "bridge"
+- "compiler"
