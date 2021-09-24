@@ -24,6 +24,12 @@ interface ConfigJson {
 	 * @example ["solvedDev", "Joel ant 05"]
 	 */
 	authors: string[]
+	/**
+	 * A path relative to the project roots that points to a logo representing the author group
+	 *
+	 * @example "./my-logo.png"
+	 */
+	authorGroupLogo?: string
 
 	/**
 	 * The Minecraft version this project targets
@@ -76,7 +82,6 @@ interface ConfigJson {
 		names: PackDefinition
 	}
 
-
 	/**
 	 * Tools can create their own namespace inside of this file to save tool specific data and settings
 	 *
@@ -119,6 +124,8 @@ A common project structure for a Minecraft Bedrock project following this standa
 The specification only handles the config.json file at the root of the project. The exact folder names of individual packs can change based on its content.
 
 ## Reserved Tool IDs
+
 The following tool identifiers are already in use:
-- "bridge"
-- "compiler"
+
+-   "bridge"
+-   "compiler"
