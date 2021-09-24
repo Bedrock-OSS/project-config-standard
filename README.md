@@ -25,7 +25,7 @@ interface ConfigJson {
 	 */
 	authors: string[]
 	/**
-	 * A path relative to the project roots that points to a logo representing the author group
+	 * A path relative to the project root that points to a logo representing the author group
 	 *
 	 * @example "./my-logo.png"
 	 */
