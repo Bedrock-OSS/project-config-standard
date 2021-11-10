@@ -23,13 +23,7 @@ interface ConfigJson {
 	 *
 	 * @example ["solvedDev", "Joel ant 05"]
 	 */
-	authors: string[]
-	/**
-	 * A path relative to the project root that points to a logo representing the author group
-	 *
-	 * @example "./my-logo.png"
-	 */
-	authorGroupLogo?: string
+	authors: (string | AuthorData)[]
 
 	/**
 	 * The Minecraft version this project targets
@@ -105,6 +99,22 @@ interface PackDefinition {
 	 * String to add to a tool's collected data
 	 */
 	include: string[]
+}
+
+interface AuthorData {
+	/**
+	 * Name of the author
+	 *
+	 * @example "solvedDev"
+	 */
+	name: string
+	/**
+	 * Path to an image (relative to the project root) that serves as an icon for this author. 
+	 * Tools should support ".png" & ".jpg" images
+	 *
+	 * @example "./meta/icons/solvedDev.png"
+	 */
+	logo?: string
 }
 ```
 
