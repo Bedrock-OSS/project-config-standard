@@ -122,3 +122,4 @@ The specification only handles the config.json file at the root of the project. 
 The following tool identifiers are already in use:
 - "bridge"
 - "compiler"
+- "regolith"
