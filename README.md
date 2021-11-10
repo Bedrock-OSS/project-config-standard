@@ -136,6 +136,6 @@ The specification only handles the config.json file at the root of the project. 
 ## Reserved Tool IDs
 
 The following tool identifiers are already in use:
-
--   "bridge"
--   "compiler"
+- "bridge"
+- "compiler"
+- "regolith"
