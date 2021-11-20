@@ -23,7 +23,7 @@ interface ConfigJson {
 	 *
 	 * @example ["solvedDev", "Joel ant 05"]
 	 */
-	authors: string[]
+	authors: (string | AuthorData)[]
 
 	/**
 	 * The Minecraft version this project targets
@@ -76,7 +76,6 @@ interface ConfigJson {
 		names: PackDefinition
 	}
 
-
 	/**
 	 * Tools can create their own namespace inside of this file to save tool specific data and settings
 	 *
@@ -101,6 +100,22 @@ interface PackDefinition {
 	 */
 	include: string[]
 }
+
+interface AuthorData {
+	/**
+	 * Name of the author
+	 *
+	 * @example "solvedDev"
+	 */
+	name: string
+	/**
+	 * Path to an image (relative to the project root) that serves as an icon for this author. 
+	 * Tools should support ".png" & ".jpg" images
+	 *
+	 * @example "./meta/icons/solvedDev.png"
+	 */
+	logo?: string
+}
 ```
 
 ## Project Structure
@@ -119,6 +134,7 @@ A common project structure for a Minecraft Bedrock project following this standa
 The specification only handles the config.json file at the root of the project. The exact folder names of individual packs can change based on its content.
 
 ## Reserved Tool IDs
+
 The following tool identifiers are already in use:
 - "bridge"
 - "compiler"
