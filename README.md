@@ -62,6 +62,16 @@ interface ConfigJson {
 				| 'dataPack'
 		]: string
 	}
+	
+	/**
+	 * Defines a list of glob patterns pointing to folders storing Minecraft worlds. 
+	 * Glob patterns may not end with "**" to avoid ambiguity. If implementors encounter such an invalid glob pattern upon parsing, 
+	 * a warning should be raised and the glob pattern should be ignored.
+	 * 
+	 * @example ["./worlds/1", "./worlds/other/*"]
+	 * @example ["./worlds/*"]
+	 */
+	worlds: string[]
 
 	/**
 	 * Allows users to define additional data which is hard to find for tools
